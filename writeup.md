@@ -88,6 +88,10 @@ To train the model, I used an AdamOptimizer with batch size 256, number of epoch
 
 It gives accuracy of 0.967 on validation set and 0.860 on testing set
  
+####4. Approach
+I started with LeNet architecture and found that i didn't get good accuracy on validation set and test set. I then started changing the design by adding some layers like changing convolution layer to 3x3 or adding another convolution layer, but realized that this is incorrect approach. Correct approach would be to visualize each layer's output to contruct the network. I didn't have enough time to implement this yet, so i had to make some guesses as to what could improve accuracy of the archtiecture. By changing the layers I finally found a design which gave decent results on the dataset, but as noted below failed to generalize to new data.
+
+The reason i started with LeNet architecture was because it is built to classify images into known labels. I knew that LeNet would not be sufficient to classify Traffic signs as Traffic signs are more complicated than alphabets since it has complex shapes in it. 
 
 ###Test a Model on New Images
 
